@@ -1,0 +1,16 @@
+/* 
+* Màu chủ đạo của theme
+*/
+:root {
+    --main-color: #d12032 !important;
+    --MAIN-COLOR: #d12032 !important;
+    --main-color-hover: #bb2332 !important;
+    --MAIN-COLOR-HOVER: #bb2332 !important;
+    --main-color-hover1: #9b1d29 !important;
+    --MAIN-COLOR-HOVER1: #9b1d29 !important;
+}
+@media(max-width: 767px){
+    #st-2{
+        display: none !important;
+    }
+}

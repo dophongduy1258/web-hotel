@@ -1,0 +1,3 @@
+- HC: 15/06/2021
+- Cấu hình database ở $directthumuc/config.php
+- File database mẫu là database.sql

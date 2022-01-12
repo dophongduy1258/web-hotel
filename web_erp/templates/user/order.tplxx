@@ -1,0 +1,82 @@
+<div class="profile">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-12 left">
+                {include "`$tpldirect`user/menu.tpl"}
+            </div>
+            <div class="col-md-9 col-sm-8 col-xs-12 right" id="formOrder">
+                <ul class="nav nav-tabs nav-storing">
+                    <li id="tab_processing" class="tab-modify active"><a data-toggle="tab" href="#processing">Đang xử lý</a></li>
+                    <li id="tab_waiting" class="tab-modify"><a data-toggle="tab" href="#waiting">Chờ thanh toán</a></li>
+                    <li id="tab_done" class="tab-modify"><a data-toggle="tab" href="#done">Đã hoàn thành</a></li>
+                    <li id="tab_cancel" class="tab-modify"><a data-toggle="tab" href="#cancel">Đã hủy</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="item info-order tab-pane fade in active" id="processing">
+                        <h3 class="title-profile" id="totalProcessing"></h3>
+                        <div class="info-order-detail tab-pane fade in active" id='lProcessing'>
+                            <ul class="title">
+                                <li class="img">Hình ảnh</li>
+                                <li class="code">Mã ĐH</li>
+                                <li class="date">Ngày mua</li>
+                                <li class="price">Tổng tiền</li>
+                                <li class="detail">Chi tiết</li>
+                                <li class="action">@</li>
+                            </ul>
+                        </div>
+                    </div>
+                    {* <div class="item info-order tab-pane fade in" id="waiting">
+                        <h3 class="title-profile" id="totalWaiting"></h3>
+                        <div class="info-order-detail tab-pane fade in active" id='lWaiting'>
+                            <ul class="title">
+                                <li class="img">Hình ảnh</li>
+                                <li class="code">Mã ĐH</li>
+                                <li class="date">Ngày mua</li>
+                                <li class="price">Tổng tiền</li>
+                                <li class="detail">Chi tiết</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item info-order tab-pane fade in" id="done">
+                        <h3 class="title-profile" id="totalDone"></h3>
+                        <div class="info-order-detail tab-pane fade in active" id='lDone'>
+                            <ul class="title">
+                                <li class="img">Hình ảnh</li>
+                                <li class="code">Mã ĐH</li>
+                                <li class="date">Ngày mua</li>
+                                <li class="price">Tổng tiền</li>
+                                <li class="detail">Chi tiết</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item info-order tab-pane fade in" id="cancel">
+                        <h3 class="title-profile" id="totalCancel"></h3>
+                        <div class="info-order-detail tab-pane fade in active" id='lCancel'>
+                            <ul class="title">
+                                <li class="img">Hình ảnh</li>
+                                <li class="code">Mã ĐH</li>
+                                <li class="date">Ngày mua</li>
+                                <li class="price">Tổng tiền</li>
+                                <li class="detail">Chi tiết</li>
+                            </ul>
+                        </div>
+                    </div> *}
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-8 col-xs-12 right" id="formDetail" style="display: none;">
+                <div class="item info-order" id="formDetailOrder">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <h3 class="title-profile" id="orderID"></h3>
+                    <div class="info-order-detail" id='lProduct'>
+                        <ul class="title">
+                            <li class="img">Hình ảnh</li>
+                            <li class="content">Tên sản phẩm</li>
+                            <li class="price">Giá</li>
+                            <li class="date">Ngày mua</li>
+                            <li class="code">Mã ĐH</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>

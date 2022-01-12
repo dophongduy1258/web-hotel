@@ -1,0 +1,58 @@
+<IfModule mod_rewrite.c>
+ErrorDocument 404 /404
+RewriteEngine On
+RewriteBase /
+
+#RewriteCond %{HTTPS} !on
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+#url tong quan
+RewriteRule ^trang-chu$ /?m=home&act=index [L]
+RewriteRule ^trang-chu/$ /?m=home&act=index [L]
+RewriteRule ^trang-chu/([0-9]+)$ /?m=home&act=index&page=$1 [L]
+RewriteRule ^tai-ung-dung$ /?m=home&act=down_app [L]
+RewriteRule ^san-pham$ /?m=product&act=index [L]
+RewriteRule ^san-pham/$ /?m=product&act=index [L]
+RewriteRule ^san-pham/([0-9]+)$ /?m=product&act=index&page=$1 [L]
+RewriteRule ^san-pham-rf(.*)$ /?m=product&act=index&referral=$1 [L]
+RewriteRule ^san-pham-rf(.*)/([0-9]?)$ /?m=product&act=index&referral=$1&page=$2 [L]
+RewriteRule ^(.*)-c([0-9]+)$ /?m=product&act=index&link=$1&cat_id=$2 [L]
+RewriteRule ^(.*)-c([0-9]+)/([0-9]?)$ /?m=product&act=index&link=$1&cat_id=$2&page=$3 [L]
+RewriteRule ^(.*)-p([0-9]+)$ /?m=product&act=detail&link=$1&id=$2 [L]
+RewriteRule ^(.*)-p([0-9]+)/(.*)$ /?m=product&act=detail&link=$1&id=$2&referral=$3 [L]
+RewriteRule ^gio-hang$ /?m=cart&act=index [L]
+RewriteRule ^thanh-toan$ /?m=cart&act=payment [L]
+RewriteRule ^lien-he$ /?m=contact&act=index [L]
+RewriteRule ^tin-tuc$ /?m=news&act=index [L]
+RewriteRule ^tin-tuc/$ /?m=news&act=index [L]
+RewriteRule ^tin-tuc/([0-9]+)$ /?m=news&act=index&page=$1 [L]
+RewriteRule ^(.*)-cn([0-9]+)$ /?m=news&act=index&link=$1&id=$2 [L]
+RewriteRule ^(.*)-cn([0-9]+)/([0-9]?)$ /?m=news&act=index&link=$1&id=$2&page=$3 [L]
+RewriteRule ^(.*)-cn([0-9]+)/(.*)$ /?m=news&act=index&link=$1&id=$2&keyword=$3 [L]
+RewriteRule ^(.*)-cn([0-9]+)/(.*)/([0-9]?)$ /?m=news&act=index&link=$1&id=$2&keyword=$3&page=$4 [L]
+RewriteRule ^(.*)-dn([0-9]+)$ /?m=news&act=detail&link=$1&id=$2 [L]
+RewriteRule ^tim-kiem-q=(.*)$ /?m=product&act=search&keyword=$1 [L]
+RewriteRule ^tim-kiem-q=(.*)/$ /?m=product&act=search&keyword=$1 [L]
+RewriteRule ^tim-kiem-q=(.*)/([0-9]+)$ /?m=product&act=search&keyword=$1&page=$2 [L]
+RewriteRule ^tim-kiem-(.*)-cq([0-9]+)$ /?m=product&act=search&link=$1&cat_id=$2 [L]
+RewriteRule ^tim-kiem-(.*)-cq([0-9]+)/$ /?m=product&act=search&link=$1&cat_id=$2 [L]
+RewriteRule ^tim-kiem-(.*)-cq([0-9]+)/([0-9]+)$ /?m=product&act=search&link=$1&cat_id=$2&page=$3 [L]
+RewriteRule ^thong-tin$ /?m=user&act=profile [L]
+RewriteRule ^thong-tin-thanh-toan$ /?m=user&act=paymentcard [L]
+RewriteRule ^dang-nhap$ /?m=user&act=login [L]
+RewriteRule ^dang-ky-tai-khoan$ /?m=user&act=register [L]
+RewriteRule ^dang-ky-tai-khoan/(.*)$ /?m=user&act=register&user_id=$1 [L]
+RewriteRule ^quen-mat-khau$ /?m=user&act=forgotpassword [L]
+RewriteRule ^quan-ly-don-hang$ /?m=user&act=order [L]
+RewriteRule ^thong-bao$ /?m=user&act=notification [L]
+RewriteRule ^so-dia-chi$ /?m=user&act=address [L]
+RewriteRule ^quan-ly-vi$ /?m=user&act=wallet [L]
+RewriteRule ^quan-ly-doi-nhom$ /?m=user&act=member [L]
+RewriteRule ^hoa-hong-quan-ly-phong-ban$ /?m=user&act=departmental_roses [L]
+RewriteRule ^doanh-thu-phong-ban$ /?m=user&act=departmental_revenue [L]
+RewriteRule ^hoa-hong-huan-luyen$ /?m=user&act=training_roses [L]
+RewriteRule ^quan-ly-chung-chi$ /?m=user&act=training [L]
+RewriteRule ^gioi-thieu$ /?m=about&act=index [L]
+RewriteRule ^404$ /?m=home&act=error [L]
+
+</IfModule>
