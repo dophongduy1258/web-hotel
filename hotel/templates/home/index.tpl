@@ -378,4 +378,7 @@
     <input type="text" id="name_address" />
     <button>thêm địa chỉ mới</button>
 </div>
+<div>
+<p> hello </p>
+</div>
 
